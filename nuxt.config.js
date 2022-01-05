@@ -55,8 +55,12 @@ export default defineNuxtConfig({
     [
       'nuxt-supabase',
       {
-        supabaseUrl: process.env.SUPABASE_URL,
-        supabaseKey: process.env.SUPABASE_KEY,
+        supabaseUrl:
+          process.env.SUPABASE_URL ||
+          'https://fxedsueghpxtbnavbklu.supabase.co',
+        supabaseKey:
+          process.env.SUPABASE_KEY ||
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MTQwMzAwMiwiZXhwIjoxOTU2OTc5MDAyfQ.6syaiLAIKiAU72hh1HIu4BeIyHQ8Nz5a5xfDl5CIzOw',
       },
     ],
   ],
