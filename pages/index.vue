@@ -91,7 +91,7 @@
             <p>
               Redeem here:
               <a
-                href="https://wa.me/+628158219931"
+                href="https://wa.me/+628158219931?text=Hello%20CodeBrew%2C%20I%20want%20to%20use%20my%20coupon"
                 target="_blank"
                 rel="nofollow noreferrer"
                 >WA</a
@@ -106,6 +106,25 @@
           </div>
         </div>
       </van-popup>
+      <div class="spacer"></div>
+      <p style="margin: 0">
+        📷IG:
+        <a
+          href="https://instagram.com/codebrew.official"
+          target="_blank"
+          rel="nofollow noreferrer"
+          ><u>codebrew.official</u></a
+        >
+      </p>
+      <p>
+        📲WA:
+        <a
+          href="https://wa.me/+628158219931?text=Hello%20CodeBrew"
+          target="_blank"
+          rel="nofollow noreferrer"
+          ><u>Click here</u></a
+        >
+      </p>
       <div class="spacer"></div>
       <small>
         CODEBREW <span style="font-size: 1.05rem">©️</span>
@@ -172,7 +191,7 @@ export default {
     },
     getTwoWeeksAfter() {
       const now = this.today
-      now.setDate(now.getDate() + 2 * 7)
+      now.setDate(now.getDate() + 1 * 7)
       return now
     },
   },
