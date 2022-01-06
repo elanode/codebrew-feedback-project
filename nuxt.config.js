@@ -1,7 +1,4 @@
-import { defineNuxtConfig } from '@nuxt/bridge'
-
-export default defineNuxtConfig({
-  bridge: true, // Temporarily disable bridge integration
+export default {
   // Your existing configuration
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -98,4 +95,4 @@ export default defineNuxtConfig({
       // }
     },
   },
-})
+}
