@@ -3,8 +3,8 @@
     id="Layer_1"
     data-name="Layer 1"
     xmlns="http://www.w3.org/2000/svg"
-    width="350"
-    height="350"
+    width="250"
+    height="250"
     viewBox="0 0 1080 1080"
   >
     <defs>

@@ -44,6 +44,7 @@
 </template>
 
 <script>
+import { Dialog } from 'vant'
 export default {
   name: 'IndexPage',
 
@@ -54,19 +55,38 @@ export default {
       comment: '',
     }
   },
+  async mounted() {
+    try {
+      await this.$recaptcha.init()
+    } catch (e) {
+      console.log(e)
+    }
+  },
   methods: {
     onSubmit(values) {
       console.log(this.$supabase)
     },
-    async writeToFirestore() {
-      const { data, error } = await this.$supabase
-        .from('feedback')
-        .insert([
-          { email: this.email, rating: this.rating, comment: this.comment },
-        ])
+    writeToFirestore() {
+      Dialog.confirm({
+        title: 'Title',
+        message: 'Content',
+        cancelButtonText: 'Cancel',
+        confirmButtonText: 'Confirm',
+      })
+        .then(() => {
+          // on confirm
+        })
+        .catch(() => {
+          // on cancel
+        })
+      // const { data, error } = await this.$supabase
+      //   .from('feedback')
+      //   .insert([
+      //     { email: this.email, rating: this.rating, comment: this.comment },
+      //   ])
 
-      console.log(data)
-      console.log(error)
+      // console.log(data)
+      // console.log(error)
     },
   },
 }
@@ -93,6 +113,8 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .spacer {
