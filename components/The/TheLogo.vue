@@ -3,8 +3,8 @@
     id="Layer_1"
     data-name="Layer 1"
     xmlns="http://www.w3.org/2000/svg"
-    width="250"
-    height="250"
+    :width="width"
+    :height="height"
     viewBox="0 0 1080 1080"
   >
     <defs>
@@ -62,6 +62,16 @@
 <script>
 export default {
   name: 'TheLogo',
+  props: {
+    width: {
+      type: Number,
+      default: 240,
+    },
+    height: {
+      type: Number,
+      default: 240,
+    },
+  },
 }
 </script>
 
