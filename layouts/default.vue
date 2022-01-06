@@ -21,6 +21,6 @@ body {
 }
 
 .main-content {
-  min-height: 100vh;
+  min-height: 80vh;
 }
 </style>

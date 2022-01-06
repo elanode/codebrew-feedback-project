@@ -207,4 +207,9 @@ export default {
 .spacer {
   margin-top: 2rem;
 }
+
+input[type='text'],
+textarea {
+  font-size: 16px;
+}
 </style>
